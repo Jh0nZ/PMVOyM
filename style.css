@@ -1,0 +1,356 @@
+:root {
+    --color-background: linear-gradient(to right, #000000, #3432cc);
+    --color-text: #fff;
+    --color-accent: #638be2;
+    --color-button-background: #5654e9;
+    --color-button-hover: #1f1e8e;
+    --color-scrollbar: #4d4dff;
+    --color-service-border: #ccc;
+    --color-service-box-shadow: #00000099;
+    --color-service-background: #fff;
+    --color-contact-form-button: #3432cc;
+    --color-nosotros-background: rgba(44, 62, 80, 0.8);
+    --color-nosotros-title: #3498db;
+    --color-nosotros-text: #ecf0f1;
+    --color-text-invert: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    background: var(--color-background);
+    height: 100vh;
+    width: 100%;
+}
+
+.inicio {
+    width: 100%;
+    padding: 30px;
+    height: auto;
+    box-shadow: 0 2px 16px #00000090;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.nav {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+.btn-box button{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 18px;
+}
+.content-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.content {
+    display: none;
+    animation: moving 500ms ease;
+    height: 100%;
+    
+}
+@keyframes moving {
+    from {transform: translateX(50px);opacity: 0;}
+    to {transform: translateX(0px);opacity: 1;}
+}
+
+.content h2{
+    margin-bottom: 10px;
+}
+
+#btn.active {
+    color: var(--color-accent);
+}
+
+.btn-line {
+    position: absolute;
+    top: 56px;
+    left: 90px;
+    width: 90px;
+    height: 5px;
+    background: var(--color-accent);
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+.content.active {
+    display: block;
+}
+
+.logo {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+}
+.logo span {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+.logo i {
+    color: var(--color-text);
+    font-size: 50px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    color: var(--color-text);
+    justify-content: space-between;
+    height: 100%;
+}
+.home img {
+    height: 80%;
+}
+.home h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+.home h3 {
+    font-size: 75px;
+    font-weight: 600px;
+    margin-bottom: 50px;
+}
+.home p {
+    font-size: 30px;
+    font-weight: 200;
+    max-width: 500px;
+}
+.home div {
+    margin-left: 50px;
+}
+
+#servicios {
+    display: none;
+    flex-wrap: wrap;
+    overflow-y: auto;
+
+}
+
+#servicios::-webkit-scrollbar {
+    width: 12px; /* Ajusta el ancho del scrollbar */
+}
+
+#servicios::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar); /* Color del scrollbar */
+    border-radius: 6px; /* Radio de los bordes del scrollbar */
+}
+
+#servicios::-webkit-scrollbar-track {
+    background: transparent; /* Color del track (fondo detrás del thumb) */
+}
+#servicios.active {
+    display: flex;
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 100px); /* El 20px es para dejar espacio entre los servicios */
+    margin: 25px 50px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 4px 8px #00000099;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.servicio img {
+    max-width: 60%;
+    border-radius: 50%; /* Para hacer el borde de la imagen circular */
+    margin-bottom: 20px;
+}
+.servicio h4 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.servicio span {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.servicio a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--color-button-background);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff
+}
+
+#contactanos.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    justify-content: baseline;
+}
+#contactanos {
+    padding: 20px;
+}
+
+#contacto-form {
+    max-width: 400px;
+    margin: auto;
+}
+
+#contacto-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contacto-form input,
+#contacto-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#contacto-form button {
+    background-color: var(--color-button-background);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contacto-form button:hover {
+    background-color: var(--color-button-hover);
+}
+
+#nosotros.active {
+    display: block;
+    color: #fff;
+}
+
+#nosotros {
+    padding: 40px;
+    background-color: var(--color-nosotros-background);
+    border-radius: 10px;
+}
+
+#nosotros h2 {
+    color: var(--color-nosotros-title);
+    text-align: center;
+}
+
+#nosotros p {
+    font-size: 18px; 
+    line-height: 1.8;
+    color: var(--color-nosotros-text);
+}
+
+#nosotros h3 {
+    color: var(--color-nosotros-title);
+}
+
+#nosotros ul {
+    list-style-type: disc;
+    padding: 10px 0;
+}
+
+#nosotros li {
+    margin-bottom: 8px;
+}
+
+#nosotros strong {
+    color: #e74c3c;
+}
+
+#precios.active {
+    display: flex;
+}
+
+#precios {
+    display: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.precio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.33% - 100px); /* El 20px es para dejar espacio entre los servicios */
+    margin: 25px 50px;
+    padding: 20px; /* Ajusta según tus necesidades */
+    border: 1px solid #ccc;
+    color: #000;
+    text-align: center;
+    box-shadow: 0 4px 8px #00000099;
+    border-radius: 8px; /* Puedes ajustar según tus necesidades */
+    background-color: #fff;
+}
+
+
+.precio h2 {
+    color: var(--color-accent);
+}
+
+.precio p {
+    font-size: 3vw; /* Utilizando viewport width como unidad relativa */
+}
+
+.precio button {
+    background-color: var(--color-button-background);
+    color: var(--color-text);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.precio button:hover {
+    background-color: var(--color-button-hover);
+}
+
+.informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.7;
+}
+.beneficios {
+    flex: 0.3;
+    border-top: 2px solid #ccc;
+    overflow-y: auto;
+    min-width: 400px;
+}
+.beneficios p{
+    font-size: 2vw;
+}
