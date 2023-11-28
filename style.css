@@ -38,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .nav {
     display: flex;
     flex: 0 0 auto;
@@ -52,7 +53,8 @@ body {
     font-weight: 600;
     position: relative;
 }
-.btn-box button{
+
+.btn-box button {
     font-size: 18px;
     font-weight: 600;
     color: var(--color-text);
@@ -61,23 +63,33 @@ body {
     border: none;
     padding: 18px;
 }
+
 .content-box {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
 }
+
 .content {
     display: none;
     animation: moving 500ms ease;
     height: 100%;
-    
-}
-@keyframes moving {
-    from {transform: translateX(50px);opacity: 0;}
-    to {transform: translateX(0px);opacity: 1;}
+
 }
 
-.content h2{
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.content h2 {
     margin-bottom: 10px;
 }
 
@@ -107,11 +119,13 @@ body {
     gap: 10px;
     background-color: transparent;
 }
+
 .logo span {
     font-size: 30px;
     font-weight: 600;
     color: var(--color-text);
 }
+
 .logo i {
     color: var(--color-text);
     font-size: 50px;
@@ -124,23 +138,28 @@ body {
     justify-content: space-between;
     height: 100%;
 }
+
 .home img {
     height: 80%;
 }
+
 .home h2 {
     font-size: 40px;
     font-weight: 400;
 }
+
 .home h3 {
     font-size: 75px;
     font-weight: 600px;
     margin-bottom: 50px;
 }
+
 .home p {
     font-size: 30px;
     font-weight: 200;
     max-width: 500px;
 }
+
 .home div {
     margin-left: 50px;
 }
@@ -153,25 +172,32 @@ body {
 }
 
 #servicios::-webkit-scrollbar {
-    width: 12px; /* Ajusta el ancho del scrollbar */
+    width: 12px;
+    /* Ajusta el ancho del scrollbar */
 }
 
 #servicios::-webkit-scrollbar-thumb {
-    background-color: var(--color-scrollbar); /* Color del scrollbar */
-    border-radius: 6px; /* Radio de los bordes del scrollbar */
+    background-color: var(--color-scrollbar);
+    /* Color del scrollbar */
+    border-radius: 6px;
+    /* Radio de los bordes del scrollbar */
 }
 
 #servicios::-webkit-scrollbar-track {
-    background: transparent; /* Color del track (fondo detrás del thumb) */
+    background: transparent;
+    /* Color del track (fondo detrás del thumb) */
 }
+
 #servicios.active {
     display: flex;
 }
+
 .servicio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(33.33% - 100px); /* El 20px es para dejar espacio entre los servicios */
+    width: calc(33.33% - 100px);
+    /* El 20px es para dejar espacio entre los servicios */
     margin: 25px 50px;
     padding: 15px;
     border: 1px solid #ccc;
@@ -184,14 +210,17 @@ body {
 
 .servicio img {
     max-width: 60%;
-    border-radius: 50%; /* Para hacer el borde de la imagen circular */
+    border-radius: 50%;
+    /* Para hacer el borde de la imagen circular */
     margin-bottom: 20px;
 }
+
 .servicio h4 {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 .servicio span {
     font-size: 15px;
     font-weight: 600;
@@ -216,6 +245,7 @@ body {
     color: #fff;
     justify-content: baseline;
 }
+
 #contactanos {
     padding: 20px;
 }
@@ -268,7 +298,7 @@ body {
 }
 
 #nosotros p {
-    font-size: 18px; 
+    font-size: 18px;
     line-height: 1.8;
     color: var(--color-nosotros-text);
 }
@@ -304,14 +334,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(33.33% - 100px); /* El 20px es para dejar espacio entre los servicios */
+    width: calc(33.33% - 100px);
+    /* El 20px es para dejar espacio entre los servicios */
     margin: 25px 50px;
-    padding: 20px; /* Ajusta según tus necesidades */
+    padding: 20px;
+    /* Ajusta según tus necesidades */
     border: 1px solid #ccc;
     color: #000;
     text-align: center;
     box-shadow: 0 4px 8px #00000099;
-    border-radius: 8px; /* Puedes ajustar según tus necesidades */
+    border-radius: 8px;
+    /* Puedes ajustar según tus necesidades */
     background-color: #fff;
 }
 
@@ -321,7 +354,8 @@ body {
 }
 
 .precio p {
-    font-size: 3vw; /* Utilizando viewport width como unidad relativa */
+    font-size: 3vw;
+    /* Utilizando viewport width como unidad relativa */
 }
 
 .precio button {
@@ -345,12 +379,23 @@ body {
     justify-content: space-between;
     flex: 0.7;
 }
+
 .beneficios {
     flex: 0.3;
     border-top: 2px solid #ccc;
     overflow-y: auto;
     min-width: 400px;
 }
-.beneficios p{
-    font-size: 2vw;
+
+.beneficios p {
+    position: relative;
+    font-size: 1vw;
+    list-style-type: disc;
+}
+
+.beneficios p::before {
+    content: '\2022';
+    /* Código Unicode para el punto de lista */
+    position: absolute;
+    left: 0;
 }
