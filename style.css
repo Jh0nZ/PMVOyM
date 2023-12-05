@@ -293,6 +293,23 @@ body {
     overflow-y: auto;
 }
 
+#nosotros::-webkit-scrollbar {
+    width: 12px;
+    /* Ajusta el ancho del scrollbar */
+}
+
+#nosotros::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    /* Color del scrollbar */
+    border-radius: 6px;
+    /* Radio de los bordes del scrollbar */
+}
+
+#nosotros::-webkit-scrollbar-track {
+    background: transparent;
+    /* Color del track (fondo detrás del thumb) */
+}
+
 #nosotros h2 {
     color: var(--color-nosotros-title);
     text-align: center;
@@ -405,4 +422,67 @@ body {
 
 .precioBolivianos {
     font-weight: 600;
+}
+
+#contactanos {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#contacto-form {
+    display: grid;
+    gap: 15px;
+}
+
+#contacto-form label {
+    font-weight: bold;
+}
+
+#contacto-form input,
+#contacto-form select,
+#contacto-form textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contacto-form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contacto-form button:hover {
+    background-color: #45a049;
+}
+
+.temp122 {
+    display: flex;
+    flex-direction: row;
+}
+.temp122 input[type="checkbox"] {
+    max-width: 20px;
+    appearance: none; /* Elimina el estilo nativo del sistema operativo */
+    -webkit-appearance: none; /* Para navegadores basados en WebKit (Safari, Chrome) */
+    -moz-appearance: none; /* Para navegadores basados en Gecko (Firefox) */
+    width: 20px; /* Ancho del diseño del checkbox personalizado */
+    height: 20px; /* Altura del diseño del checkbox personalizado */
+    border: 2px solid #333; /* Color del borde del diseño del checkbox */
+    background-color: #fff; /* Color de fondo del diseño del checkbox */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-right: 8px; /* Espacio entre el checkbox y el texto del label */
+    vertical-align: middle; /* Alineación vertical con el texto del label */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+}
+
+.temp122 input[type="checkbox"]:checked {
+    background-color: #4caf50; /* Color de fondo cuando el checkbox está seleccionado */
+    border-color: #4caf50; /* Color del borde cuando el checkbox está seleccionado */
 }

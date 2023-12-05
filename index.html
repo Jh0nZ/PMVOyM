@@ -61,7 +61,8 @@
                     <img src="images/primero.jpg" alt="">
                     <h4>Entrenamiento en Simulacros de Phishing</h4>
                     <span>
-                        Realizamos simulacros de phishing personalizados para capacitar a sus empleados en la identificación de correos electrónicos maliciosos, fortaleciendo así la conciencia de seguridad.
+                        Realizamos simulacros de phishing personalizados para capacitar a sus empleados en la
+                        identificación de correos electrónicos maliciosos, fortaleciendo así la conciencia de seguridad.
                     </span>
                     <span class="precioBolivianos">Precio: 1,500 Bs/sesión</span>
                     <a href="">Mas informacion</a>
@@ -70,7 +71,8 @@
                     <img src="images/segundo.jpg" alt="">
                     <h4>Análisis Forense Digital por Incidente</h4>
                     <span>
-                        En caso de un incidente de seguridad, nuestro equipo llevará a cabo un análisis forense digital completo para identificar la causa, el alcance y las medidas de mitigación necesarias.
+                        En caso de un incidente de seguridad, nuestro equipo llevará a cabo un análisis forense digital
+                        completo para identificar la causa, el alcance y las medidas de mitigación necesarias.
                     </span>
                     <span class="precioBolivianos">Precio: 50,000 Bs/incidente</span>
                     <a href="">Mas informacion</a>
@@ -79,7 +81,8 @@
                     <img src="images/cuarto.jpg" alt="">
                     <h4>Implementación de Políticas de Seguridad</h4>
                     <span>
-                        Desarrollamos e implementamos políticas de seguridad personalizadas para su empresa, asegurando el cumplimiento normativo y estableciendo un marco sólido para la gestión de riesgos.
+                        Desarrollamos e implementamos políticas de seguridad personalizadas para su empresa, asegurando
+                        el cumplimiento normativo y estableciendo un marco sólido para la gestión de riesgos.
                     </span>
                     <span class="precioBolivianos">Precio: 10,000 Bs/una vez</span>
                     <a href="">Mas informacion</a>
@@ -88,16 +91,18 @@
                     <img src="images/segundo.jpg" alt="">
                     <h4>Revisión de Seguridad de Aplicaciones Web</h4>
                     <span>
-                        Realizamos evaluaciones de seguridad exhaustivas en sus aplicaciones web, identificando posibles vulnerabilidades y proporcionando recomendaciones para mejorar la seguridad.
+                        Realizamos evaluaciones de seguridad exhaustivas en sus aplicaciones web, identificando posibles
+                        vulnerabilidades y proporcionando recomendaciones para mejorar la seguridad.
                     </span>
-                    <span class="precioBolivianos">Precio:  15,000 Bs/aplicación</span>
+                    <span class="precioBolivianos">Precio: 15,000 Bs/aplicación</span>
                     <a href="">Mas informacion</a>
                 </div>
                 <div class="servicio">
                     <img src="images/cuarto.jpg" alt="">
                     <h4>Servicio de Respuesta a Incidentes de Emergencia (24/7)</h4>
                     <span>
-                        Brindamos un servicio continuo de respuesta a incidentes, asegurando asistencia inmediata y coordinación eficiente en situaciones críticas de seguridad, las 24 horas del día.
+                        Brindamos un servicio continuo de respuesta a incidentes, asegurando asistencia inmediata y
+                        coordinación eficiente en situaciones críticas de seguridad, las 24 horas del día.
                     </span>
                     <span class="precioBolivianos">Precio: 75,000 Bs/mes</span>
                     <a href="">Mas informacion</a>
@@ -106,7 +111,9 @@
                     <img src="images/primero.jpg" alt="">
                     <h4> Evaluación de Riesgos de Seguridad</h4>
                     <span>
-                        Realizamos evaluaciones exhaustivas de riesgos de seguridad en su infraestructura digital para identificar y priorizar las amenazas potenciales, proporcionando un plan estratégico para mitigar riesgos.
+                        Realizamos evaluaciones exhaustivas de riesgos de seguridad en su infraestructura digital para
+                        identificar y priorizar las amenazas potenciales, proporcionando un plan estratégico para
+                        mitigar riesgos.
                     </span>
                     <span class="precioBolivianos">Precio: 20,000 Bs/evaluación</span>
                     <a href="">Mas informacion</a>
@@ -115,7 +122,9 @@
                     <img src="images/cuarto.jpg" alt="">
                     <h4>Auditoría de Cumplimiento Normativo</h4>
                     <span>
-                        Conducimos auditorías detalladas para garantizar el cumplimiento normativo de su empresa con estándares de seguridad específicos, proporcionando informes detallados y recomendaciones de mejora.
+                        Conducimos auditorías detalladas para garantizar el cumplimiento normativo de su empresa con
+                        estándares de seguridad específicos, proporcionando informes detallados y recomendaciones de
+                        mejora.
                     </span>
                     <span class="precioBolivianos">Precio: 12,000 Bs/auditoría</span>
                     <a href="">Mas informacion</a>
@@ -130,7 +139,7 @@
                         <button>Seleccionar</button>
                     </div>
                     <div class="beneficios">
-                        
+
                         <p>Escaneo regular de posibles vulnerabilidades en la red.</p>
                         <p>Instalación y gestión de software antivirus en todos los dispositivos clave</p>
                         <p>Sesiones de formación para los empleados sobre ciberseguridad.</p>
@@ -166,18 +175,36 @@
                 </div>
             </div>
             <div id="contactanos" class="content">
-                <h2>Email</h2>
+                <h2>Enviar correo</h2>
                 <form id="contacto-form">
-                    <label for="nombre">Nombre:</label>
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa" name="empresa" required>
+
+                    <label for="nombre">Nombre de contacto:</label>
                     <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="telefono">Teléfono de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
 
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
 
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto" required>
+                        <option value="consulta">Consulta sobre ciberseguridad</option>
+                        <option value="cotizacion">Solicitud de cotización</option>
+                        <!-- Otros motivos -->
+                    </select>
+
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
 
-                    <button type="submit">Enviar mensaje</button>
+                    <div class="temp122">
+                        <label for="suscribirse">Suscribirse a nuestro boletín informativo:</label>
+                        <input type="checkbox" id="suscribirse" name="suscribirse">
+                    </div>
+
+                    <button type="submit" onclick="submitForm()">Enviar mensaje</button>
                 </form>
             </div>
             <div id="nosotros" class="content">
