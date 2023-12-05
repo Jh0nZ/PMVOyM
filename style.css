@@ -429,6 +429,7 @@ body {
     margin: 0 auto;
     padding: 20px;
     border-radius: 8px;
+    overflow-y: auto;
 }
 
 #contacto-form {
@@ -438,6 +439,8 @@ body {
 
 #contacto-form label {
     font-weight: bold;
+    display: block; /* Asegura que las etiquetas sean de bloque para ocupar toda la línea */
+    margin-bottom: 5px; /* Agrega un espacio entre las etiquetas para evitar cortes visuales */
 }
 
 #contacto-form input,
