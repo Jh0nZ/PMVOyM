@@ -1,5 +1,5 @@
 :root {
-    --color-background: linear-gradient(to right, #000000, #3432cc);
+    --color-background: linear-gradient(to right, #003366, #001F3F);
     --color-text: #fff;
     --color-accent: #638be2;
     --color-button-background: #5654e9;
@@ -9,7 +9,7 @@
     --color-service-box-shadow: #00000099;
     --color-service-background: #fff;
     --color-contact-form-button: #3432cc;
-    --color-nosotros-background: rgba(44, 62, 80, 0.8);
+    --color-nosotros-background: ;
     --color-nosotros-title: #3498db;
     --color-nosotros-text: #ecf0f1;
     --color-text-invert: #000;
@@ -222,8 +222,7 @@ body {
 }
 
 .servicio span {
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 1em;
     margin-bottom: 5px;
 }
 
@@ -290,6 +289,8 @@ body {
     padding: 40px;
     background-color: var(--color-nosotros-background);
     border-radius: 10px;
+    font-size: 2em;
+    overflow-y: auto;
 }
 
 #nosotros h2 {
@@ -298,7 +299,7 @@ body {
 }
 
 #nosotros p {
-    font-size: 18px;
+    font-size: 1em;
     line-height: 1.8;
     color: var(--color-nosotros-text);
 }
@@ -381,21 +382,27 @@ body {
 }
 
 .beneficios {
-    flex: 0.3;
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
     border-top: 2px solid #ccc;
     overflow-y: auto;
-    min-width: 400px;
+    align-items: baseline;
 }
 
 .beneficios p {
-    position: relative;
-    font-size: 1vw;
-    list-style-type: disc;
+    font-size: 1.2em;
+    text-align: left;
+    word-wrap: break-word;
+
+    padding: 2px;
 }
 
 .beneficios p::before {
-    content: '\2022';
-    /* Código Unicode para el punto de lista */
-    position: absolute;
-    left: 0;
+    content: "\2022"; /* Código Unicode para el símbolo de viñeta • */
+    margin-right: 5px; /* Espacio entre el símbolo y el texto del párrafo */
+}
+
+.precioBolivianos {
+    font-weight: 600;
 }
